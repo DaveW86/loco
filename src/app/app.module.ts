@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LocoComponent } from './components/loco/loco.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocomotiveService } from './service/locomotive.service';
+
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [LocomotiveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
